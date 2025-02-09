@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #C65D58 0%, #EDCFB9 50%, #D4AAb3 100%);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    min-height: 100vh; /* Use min-height instead of height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Change to 'flex-start' for top alignment */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header h1 {
+    margin: 20px 0;
+}
+
+#poem {
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 300px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 2.2;
+    transition: transform 0.3s ease;
+    color: #333333;
+    margin-right: 20px;
+    flex: 1;
+}
+
+#poem h3 {
+    color: #333;
+}
+
+#poem p {
+    color: #333;
+}
+
+#gallery {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack gallery items vertically */
+    align-items: center;
+    gap: 15px; /* Add spacing between items */
+}
+
+.gallery-item img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #FEC6DF;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.button:hover {
+    background-color: #FFDDE4;
+    transform: scale(1.1); 
+}
+
+.button:focus {
+    outline: none; 
+}
+
+.button:active {
+    background-color: #FEECD6;
+}
+
+.back-button {
+    background-color: #FEC6DF;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+.back-button:hover {
+    background-color: #FFDDE4;
+    transform: scale(1.1); 
+}
+
+.back-button:focus {
+    outline: none; 
+}
+
+.back-button:active {
+    background-color: #FEECD6;
+}

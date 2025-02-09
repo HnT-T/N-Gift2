@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="NG.css">
+    <title>Drawing Information</title>
+    <style>
+        #drawing-image {
+            max-width: 30%;
+            height: auto;
+            margin: 20px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Drawing Information</h1>
+    </header>
+
+    <section id="info-content">
+        <h2 id="drawing-title">Loading...</h2>
+
+        <!-- Image placed between the title and description -->
+        <img id="drawing-image" src="" alt="Drawing">
+
+        <p id="drawing-description">Please wait...</p>
+        <button class="back-button" onclick="goBack()">Go Back</button>
+    </section>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const drawing = urlParams.get('drawing');
+        const imageUrl = urlParams.get('image');
+
+        const drawingTitle = document.getElementById("drawing-title");
+        const drawingDescription = document.getElementById("drawing-description");
+        const drawingImage = document.getElementById("drawing-image");
+
+        if (drawing === "kufi") {
+            drawingTitle.textContent = "Kufi-style Name";
+            drawingDescription.textContent = "So I made this almost a month and a half ago or exactly 7/December, and it was my sad attempt at making a name that I find very beautiful into one of the things that I loved seeing you do. I kept trying to do it for a few hours, and it was so hard. I kept searching online for how the letters are supposed to look or any online guides that I could follow, but I did not find anything, which led me to just freestyle it T-T";
+        } else if (drawing === "cartoony") {
+            drawingTitle.textContent = "Cartoony Drawing";
+            drawingDescription.textContent = "Okay, so this idea came to mind when there was this trend that was all over my TikTok, which was about an anime girl that artists would draw in a cute way. I thought to myself, 'Hey, Nourhan fits the criteria; she is both prettier and cuter than that anime girl,' so I took it upon myself to draw you from memory in a similar style to what all the people were doing. I thought I did a great job, not going to lie, and I thought it was very cute. Even though it wasn't as cute or beautiful as you truly are, I think it was still cute in its own way.";
+        } else if (drawing === "n-heart") {
+            drawingTitle.textContent = "Letter 'N' in a Heart";
+            drawingDescription.textContent = "Here, I was just freestyling on the board in my room, and I liked where it was heading. I don't know how, but I always find myself drawing the letter 'N' and putting all kinds of hearts and colors around it, because when I look at it, I will instantly be reminded of my favorite person.";
+        } else {
+            drawingTitle.textContent = "No Drawing Found";
+            drawingDescription.textContent = "Sorry, we couldn't find information on this drawing.";
+        }
+
+        // Set the image
+        drawingImage.src = imageUrl;
+
+        // Go back to the previous page
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
